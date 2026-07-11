@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>오늘의 브리핑 - 2026년 07월 11일 (Sat)</title>
+<style>
+  :root {
+    --bg: #f4f4f6;
+    --card-bg: #ffffff;
+    --text: #1c1c1e;
+    --muted: #70707a;
+    --font-serif: Georgia, "Noto Serif KR", "Nanum Myeongjo", serif;
+    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+    --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 28px 16px 56px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-sans);
+  }
+  .wrap { max-width: 1080px; margin: 0 auto; }
+
+  .masthead {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  .masthead h1 {
+    font-family: var(--font-serif);
+    font-size: 30px;
+    margin: 0 0 10px;
+    letter-spacing: -0.02em;
+  }
+  .masthead .meta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .masthead .date {
+    font-family: var(--font-mono);
+    color: var(--muted);
+    font-size: 13px;
+  }
+  .masthead .badge {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: #fff;
+    background: #1c1c1e;
+    padding: 3px 10px;
+    border-radius: 999px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  @media (max-width: 760px) {
+    .grid { grid-template-columns: 1fr; }
+  }
+
+  .column h2 {
+    font-size: 16px;
+    margin: 0 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--accent);
+    color: var(--accent);
+  }
+
+  .card {
+    background: var(--card-bg);
+    border-left: 4px solid var(--accent);
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  }
+  .card.headline {
+    border-left-width: 6px;
+    background: color-mix(in srgb, var(--accent) 8%, white);
+  }
+  .card .badge-headline {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 700;
+    color: #fff;
+    background: var(--accent);
+    padding: 2px 7px;
+    border-radius: 4px;
+    margin-bottom: 6px;
+    letter-spacing: 0.04em;
+  }
+  .card .badge-source {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--muted);
+    background: rgba(0,0,0,0.05);
+    padding: 2px 7px;
+    border-radius: 4px;
+    margin-bottom: 6px;
+  }
+  .card a.title {
+    display: block;
+    color: var(--text);
+    text-decoration: none;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 14.5px;
+    line-height: 1.4;
+    margin-bottom: 6px;
+  }
+  .card.headline a.title {
+    font-family: var(--font-serif);
+    font-weight: 700;
+    font-size: 17px;
+  }
+  .card a.title:hover { text-decoration: underline; }
+  .card p.description {
+    margin: 0 0 8px;
+    color: #444;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  .card .source-line {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--muted);
+  }
+  .empty { color: var(--muted); font-size: 13px; }
+
+  .stat-block {
+    background: var(--card-bg);
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-bottom: 14px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  }
+  .stat-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+  }
+  .stat-row:last-of-type { border-bottom: none; }
+  .stat-row.emphasize {
+    background: color-mix(in srgb, var(--accent) 10%, transparent);
+    border-radius: 6px;
+    padding: 5px 6px;
+    font-weight: 700;
+  }
+  .stat-label { font-family: var(--font-sans); font-size: 12.5px; color: #444; }
+  .stat-value { font-family: var(--font-mono); font-size: 13.5px; margin-left: auto; margin-right: 8px; }
+  .stat-change { font-family: var(--font-mono); font-size: 12px; }
+  .stat-change.up { color: #d92626; }
+  .stat-change.down { color: #2563d9; }
+  .stat-source {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--muted);
+    margin-top: 8px;
+  }
+
+  footer { margin-top: 40px; color: #a1a1a6; font-size: 12px; text-align: center; font-family: var(--font-mono); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <h1>오늘의 브리핑</h1>
+    <div class="meta">
+      <span class="date">2026년 07월 11일 (Sat)</span>
+      <span class="badge">09:00 KST 갱신</span>
+    </div>
+  </header>
+  <main class="grid">
+    <section class="column" style="--accent: #7c3aed"><h2>🤖 AI/기술</h2><div class="card headline"><span class="badge-headline">빅테크 공식 발표 · OpenAI</span><a class="title" href="https://openai.com/index/deutsche-telekom" target="_blank" rel="noopener">How Deutsche Telekom is rewiring telecommunications with AI</a><div class="source-line">openai.com · 16:00</div></div>
+<div class="card"><span class="badge-source">언론사</span><a class="title" href="http://www.yonhapnewstv.co.kr/news/MYH20260711192812WWR" target="_blank" rel="noopener">SK하이닉스 나스닥 입성…168달러 급등마감</a><p class="description">앞으로 AI는 어디에나 있을 것이고, AI가 있는 곳이라면 어디든 SK하이닉스가 함께할 것입니다.&quot; 170달러로... [영상편집 김동현 이예림] [그래픽 용수지] [뉴스리뷰] #SK하이닉스 #나스닥 #최태원 #K반도체</p><div class="source-line">yonhapnewstv.co.kr · 19:29</div></div>
+<div class="card"><span class="badge-source">언론사</span><a class="title" href="https://www.munhwa.com/article/11601960?ref=naver" target="_blank" rel="noopener">SK하닉의 나스닥 성공적 입성, 반도체 슈퍼사이클 비관론 잠재울 수 있...</a><p class="description">블룸버그 통신은 “(SK하이닉스의) 역사적인 데뷔는 AI 붐이 수십년간 메모리 반도체 산업을 지배해 온 ‘호황-불황’ 주기를 근본적으로 바꿀 것이라는 시장의 베팅”이라고 전하며, 최태원 SK그룹 회장이 “메모리...</p><div class="source-line">munhwa.com · 19:22</div></div>
+<div class="card"><span class="badge-source">언론사</span><a class="title" href="https://www.newspim.com/news/view/20260707001267" target="_blank" rel="noopener">AI에 빠진 당신,능동적 정보탐색자가 되려면? &#x27;알렉사에게&#x27;전에 가볼까</a><p class="description">인공지능(AI)에게 묻게 된다. 제깍제깍 원하는 답이 나오니 날이 갈수록 빠져들 수 밖에 없다. 인공지능이... 특히 검색엔진과 생성형 인공지능 챗봇 등 사용자 친화적 알고리즘에 기반한 인터페이스는 제공하는 정보의...</p><div class="source-line">newspim.com · 19:20</div></div>
+<div class="card"><span class="badge-source">언론사</span><a class="title" href="https://www.viewsnnews.com/article?q=237120" target="_blank" rel="noopener">국힘 &quot;김용범, 비겁하게 꽁무니 빼지 말고 사퇴하라&quot;</a><p class="description">그러면서 &quot;3고(고금리·고물가·고환율)를 &#x27;성공의 비용&#x27;이라며 국민을 훈계하던 그 자신감은 다 어디로 갔냐&quot;며 &quot;AI·반도체 초과이익 국민 배당금이라는 위험한 사회주의 국영경제식 발상, 아마추어적 부동산 논리로 양도?...</p><div class="source-line">viewsnnews.com · 19:18</div></div>
+<div class="card"><span class="badge-source">언론사</span><a class="title" href="https://www.econovill.com/news/articleView.html?idxno=744911" target="_blank" rel="noopener">독일 양자센서 스타트업, 9100만유로 확보…AI 반도체 결함 검사 도전</a><p class="description">이번 투자는 AI 반도체 경쟁이 생산 능력을 넘어 검사 기술 경쟁으로 확대되고 있음을 보여준다. HBM과 첨단 패키징 공정이 복잡해지면서 칩 내부 결함을 찾아내는 검사 기술 중요성도 커지고 있다.</p><div class="source-line">econovill.com · 19:10</div></div></section>
+<section class="column" style="--accent: #d97706"><h2>💰 경제/금융</h2><div class="stat-block"><div class="stat-row emphasize"><span class="stat-label">코스피</span><span class="stat-value">7,475.94</span><span class="stat-change up">+2.52%</span></div><div class="stat-row emphasize"><span class="stat-label">코스닥</span><span class="stat-value">837.43</span><span class="stat-change up">+5.47%</span></div><div class="stat-row"><span class="stat-label">원/달러 환율</span><span class="stat-value">1,504.2원</span><span class="stat-change down">-0.38%</span></div><div class="stat-row"><span class="stat-label">기준금리</span><span class="stat-value">2.50%</span><span class="stat-change up">+0.00%</span></div><div class="stat-source">한국은행(ECOS) 공식 통계 · 2026-07-10 기준</div></div><div class="card headline"><span class="badge-headline">언론사</span><a class="title" href="https://www.pennmike.com/news/articleView.html?idxno=123517" target="_blank" rel="noopener">[재계핫이슈] SK하이닉스 ADR 13% 급등의 진짜 의미…TSMC식 &#x27;ADR 프리미엄...</a><p class="description">따라서 168.01달러에 10을 곱하고 당시 원·달러 환율을 적용하면 한국 보통주 1주당 약 252만8000원으로 환산된다. 이는 지난 10일 코스피에서 기록한 SK하이닉스 종가 218만6000원보다 약 15.7% 높은 가격이다. 미국...</p><div class="source-line">pennmike.com · 17:06</div></div>
+<div class="card"><span class="badge-source">언론사</span><a class="title" href="https://view.asiae.co.kr/article/2026071119262587684" target="_blank" rel="noopener">&quot;사두면 오른다&quot; 옛말…금값 꺾이자 함께 고개 숙인 중고 롤렉스</a><p class="description">금은 이자가 붙지 않는 안전 자산으로, 전문가들은 미국 기준금리가 인상될 것이란 전망과 달리 강세가 겹치면서 투자 자산으로서 매력이 떨어졌다고 평가했다. 이에 고가 시계 중고 가격도 조정 국면에 들어선 것이다....</p><div class="source-line">view.asiae.co.kr · 19:29</div></div>
+<div class="card"><span class="badge-source">언론사</span><a class="title" href="https://www.moneystorm.kr/news/articleView.html?idxno=5033" target="_blank" rel="noopener">신한투자증권, 정보보호투자 대폭강화...회사채발행은 흥행</a><p class="description">모집액 기준 가산금리(스프레드)는 2년과 3년물 각각 동일 만기 민평금리와 같은 수준(par)이다. 신한투자증권은 수요예측 결과를 반영해 최대 5000억원까지 증액 발행을 검토 중이다. 중앙그룹 회생절차 신청과...</p><div class="source-line">moneystorm.kr · 19:13</div></div>
+<div class="card"><span class="badge-source">언론사</span><a class="title" href="https://biz.heraldcorp.com/article/10805442?ref=naver" target="_blank" rel="noopener">[증시 예보] 美 CPI부터 기준금리 결정…이번주 주가 오를까?</a><p class="description">다음 주 국내 증시는 미국 소비자물가지수(CPI) 발표와 주요 기업 실적 공개, 한국은행 금융통화위원회의 기준금리 결정 등 굵직한 이벤트를 잇달아 맞는다. 이번 주 반도체 고점론과 레버리지 청산 매물로 증시...</p><div class="source-line">biz.heraldcorp.com · 18:41</div></div>
+<div class="card"><span class="badge-source">언론사</span><a class="title" href="https://www.mhns.co.kr/news/articleView.html?idxno=753117" target="_blank" rel="noopener">[박근종 칼럼] 서민층 &#x27;주거 사다리&#x27; 걷어차는 은행권 대출 제한, 획일적...</a><p class="description">특히 기준금리 인상 가능성이 거론되는 상황에서 가계 빚이 다시 급증하는 것은 우려스럽다. 정부는 지난해 6·27 대책으로 규제 지역 주택담보대출 한도를 6억 원으로 제한했지만, 집값 상승세를 꺾지는 못했다....</p><div class="source-line">mhns.co.kr · 17:58</div></div>
+<div class="card"><span class="badge-source">언론사</span><a class="title" href="https://www.hankyung.com/article/2026070963046" target="_blank" rel="noopener">&quot;로봇 믿고 쓸어담았는데&quot;…증권가 전망에 개미들 &#x27;대혼란&#x27; [투자톡]</a><p class="description">2분기 말 원·달러 환율은 1549원, 원·유로 환율은 1767원으로 전분기 대비 각각 30원과 18원 올랐다. 신 연구원은 &quot;환율 상승에 따른 외화판매보증충당부채 재평가가 판관비에 부담으로 작용할 전망&quot;이라며 &quot;2분기에는...</p><div class="source-line">hankyung.com · 17:52</div></div></section>
+<section class="column" style="--accent: #0d9488"><h2>🏠 사회/정책</h2><div class="card headline"><span class="badge-headline">정부 공식 자료 · 국토교통부</span><a class="title" href="https://www.molit.go.kr/USR/NEWS/m_71/dtl.jsp?id=95092214&amp;src=text&amp;kw=000004" target="_blank" rel="noopener">[참고] 한-몽 항공회담 성과,  지방공항 운수권 확대·인천~울란바타르 증편</a><div class="source-line">molit.go.kr · 17:08</div></div>
+<div class="card"><span class="badge-source">언론사</span><a class="title" href="https://www.viewsnnews.com/article?q=237120" target="_blank" rel="noopener">국힘 &quot;김용범, 비겁하게 꽁무니 빼지 말고 사퇴하라&quot;</a><p class="description">&quot;국민을 훈계하던 그 자신감 어디로 갔나&quot; 국민의힘은 11일 김용범 청와대 정책실장이 부동산값 폭등과 관련해 &#x27;정부가 정답을 다 알고 있다고 여기지 않는다&#x27; 등의 발언을 한 데 대해 &quot;부동산 정책도, 금융시장 정책도...</p><div class="source-line">viewsnnews.com · 19:18</div></div>
+<div class="card"><span class="badge-source">언론사</span><a class="title" href="https://www.sentv.co.kr/article/view/sentv202607110017" target="_blank" rel="noopener">[기자수첩]선거 공신 위해 4급 자리 만들었나…원주시 정책보좌관 신설...</a><p class="description">11일 원주시에 따르면 최근 행정기구 개편을 위한 입법예고를 통해 전문임기제 공무원인 정책보좌관을... 정책보좌관의 급여와 운영비는 결국 시민 세금으로 충당되고, 시장의 정책 판단과 시정 방향에도 직접 관여할 수...</p><div class="source-line">sentv.co.kr · 19:12</div></div>
+<div class="card"><span class="badge-source">언론사</span><a class="title" href="https://news.tvchosun.com/site/data/html_dir/2026/07/11/2026071190110.html" target="_blank" rel="noopener">[뉴스더] 보완수사권 폐지, 약자는 더 두렵다</a><p class="description">그동안 이재명 대통령은 &#x27;계곡정비보다 쉬운 게 부동산&#x27; 이라거나 &#x27;시장 이기는 정부도 없지만 정부 이기는 시장도 없다&#x27;며 부동산 정책에 자신감을 보여왔습니다. 하지만 최근엔 부동산과 관련한 직접 언급이 부쩍 줄었죠....</p><div class="source-line">news.tvchosun.com · 19:10</div></div>
+<div class="card"><span class="badge-source">언론사</span><a class="title" href="https://www.moneystorm.kr/news/articleView.html?idxno=5032" target="_blank" rel="noopener">SKT, 작년 해킹충격서 회복세 완연...2분기 영업이익 급증 전망</a><p class="description">일회성 부동산 매출 제거로 인한 기저 효과 영향이 우선 크다. 또 무단 소액결제 사고 수습책으로 진행... 이에 따라 안정적인 실적과 함께 주주환원 정책에 대한 신뢰도도 높아질 것으로 내다봤다. 하나증권은 특히...</p><div class="source-line">moneystorm.kr · 18:30</div></div>
+<div class="card"><span class="badge-source">언론사</span><a class="title" href="https://www.sisajournal.com/news/articleView.html?idxno=379525" target="_blank" rel="noopener">&quot;이제 &#x27;영끌&#x27;도 사치&quot;…치솟은 집값, 막힌 대출에 청년층 한숨</a><p class="description">투기 수요와 실거주 수요를 구분한 부동산 정책 설계가 필요하다는 지적이 나오는 이유다. 정부도 시장 불안을 의식해 대책 논의에 나서고 있다. 정부는 오는 14일 공급, 15일 금융, 16일 세제를 주제로 공개 토론회를 연 뒤...</p><div class="source-line">sisajournal.com · 18:22</div></div></section>
+  </main>
+  <footer>매일 아침 자동 생성됩니다.</footer>
+</div>
+</body>
+</html>

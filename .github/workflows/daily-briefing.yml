@@ -1,0 +1,67 @@
+name: Daily News Briefing
+
+on:
+  schedule:
+    # UTC 00:00 = KST 09:00 (매일 아침 9시)
+    - cron: "0 0 * * *"
+  workflow_dispatch: {} # 수동 실행 버튼 (테스트용)
+
+permissions:
+  contents: write # 브리핑 페이지(docs/index.html) 커밋/푸시에 필요
+
+jobs:
+  send-briefing:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: 저장소 체크아웃
+        uses: actions/checkout@v4
+
+      - name: Python 설치
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 의존성 설치
+        run: pip install -r requirements.txt
+
+      # 카카오 토큰은 만료/갱신되므로 실행 간 캐시로 유지합니다.
+      # (완전한 영속화가 필요하면 별도 스토리지 사용을 권장 - README 참고)
+      - name: 토큰 캐시 복원
+        uses: actions/cache@v4
+        with:
+          path: .kakao_tokens.json
+          key: kakao-tokens-${{ github.run_id }}
+          restore-keys: |
+            kakao-tokens-
+
+      # ECOS는 하루 1회만 호출하도록, 같은 날 재실행(수동 테스트 등)에는 캐시를 재사용합니다.
+      - name: ECOS 캐시 복원
+        uses: actions/cache@v4
+        with:
+          path: .ecos_cache.json
+          key: ecos-cache-${{ github.run_id }}
+          restore-keys: |
+            ecos-cache-
+
+      - name: 브리핑 실행
+        env:
+          NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
+          NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
+          KAKAO_REST_API_KEY: ${{ secrets.KAKAO_REST_API_KEY }}
+          KAKAO_REFRESH_TOKEN: ${{ secrets.KAKAO_REFRESH_TOKEN }}
+          ECOS_API_KEY: ${{ secrets.ECOS_API_KEY }}
+        run: python src/main.py
+
+      - name: 브리핑 페이지 배포
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/index.html
+          if git diff --cached --quiet; then
+            echo "변경 사항 없음, 커밋을 건너뜁니다."
+          else
+            git commit -m "chore: 오늘의 브리핑 페이지 갱신"
+            git push
+          fi
